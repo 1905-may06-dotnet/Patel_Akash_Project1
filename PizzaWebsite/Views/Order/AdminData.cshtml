@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PizzaWebsite.Models.OrderModel>
+
+@{
+    ViewData["Title"] = "AdminData";
+    int num=1;
+}
+
+
+<h1>@ViewData["Title"]</h1>
+<h2>@Html.ActionLink("Return To Locations", "AdminLocation", "Location")</h2>
+<div>
+    <h2>Inventory</h2>
+    <table style="width:100%">
+        <tr>
+            <th>Dough</th>
+            <th>Sauce</th>
+            <th>Cheese</th>
+            <th>Mushrooms</th>
+            <th>Onions</th>
+            <th>Bellpeppers</th>
+            <th>Spinach</th>
+            <th>Jalapenos</th>
+
+        </tr>
+    </table>
+</div>
+<div>
+
+   
+</div>
+<div>
+    <h2>Orders</h2>
+    <table style="width:100%">
+        <tr>
+            <th>OrderID</th>
+            <th>Pizza</th>
+            <th>Quantity</th>
+        </tr>
+    </table>
+</div>
+<div>
+    <h2>Users</h2>
+    <table style="width:100%">
+        <tr>
+            <th>UserID</th>
+        </tr>
+    </table>
+</div>
+
+<!--
+ This is the card coded way of creating a link in HTML to another page without using razor syntax
+
+ <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login"><button>Login</button></a>
+ <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register"><button>Register</button></a>
+
+-->

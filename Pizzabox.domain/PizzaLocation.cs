@@ -9,6 +9,7 @@ namespace Pizzaboxdomain
     {
         //contains a list of all current locations
         List<string> locations = new List<string>();
+        public string current = "";
 
         public PizzaLocations()
         {

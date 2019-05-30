@@ -9,17 +9,34 @@ namespace PizzaWebsite.Models
 {
     public class OrderModel
     {
-        
-            [Display(Name = "ID")]
-            public int Id { get; set; }
 
-            [Required]
-            public string Name { get; set; }
+        [Display(Name = "Location")]
+        public string Location { get; set; }
 
-        //    public IEnumerable<Review> Reviews { get; set; }
+        [Display(Name = "OrderID")]
+        public int OrderID { get; set; }
 
-            [DisplayFormat(DataFormatString = "{0:#.##}")]
-            public double? Score { get; set; }
+
+        [Display(Name = "OrderTotalCost")]
+        public double OrderTotalCost { get; set; }
+
+        [Display(Name = "Order DateTime")]
+        public DateTime OrderDateTime { get; set; }
+
+        [Display(Name = "Username")]
+        public string Username { get; set; }
+
+        /*
+        public static OrderModel Map(Pizzaboxdomain.PizzaOrder pizzaOrder) => new OrderModel()
+        {
+            OrderDateTime = pizzaOrder.OrderDatetime,
+            OrderTotalCost = pizzaOrder.gettotalpizzacost(),
+
+            
+
+        };
+        */
+
         
     }
 }

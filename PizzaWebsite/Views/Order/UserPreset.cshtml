@@ -1,0 +1,34 @@
+﻿@model PizzaWebsite.Models.PizzaModel
+@{
+    ViewData["Title"] = "Preset Pizza";
+}
+@ViewBag;
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+@{
+    ViewData["Title"] = "UserPreset";
+}
+
+<h1>Order a Preset Pizza</h1>
+
+<form target="_self" method="post">
+    <p>Pizza Name</p>
+    <select name="Pizza">
+        <option value="LargeVeg">5ToppingLargeVeg</option>
+        <option value="SmallPizza">2ToppingSmallPizza</option>
+    </select>
+    <br><br>
+    <p>Pizza Quantity</p>
+    <input type="number" max="100" min="1" />
+    <br><br>
+    <input type="submit" value="Add Pizza(s)" />
+</form>
+<p>Your current total cost is " ".</p>
+
+<h2>@Html.ActionLink("Order More?", "CustomOrPreset", "Home")</h2>
+<h2>@Html.ActionLink("Finish Order", "UserPreview", "Home")</h2>

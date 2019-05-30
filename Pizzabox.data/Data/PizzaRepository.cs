@@ -20,9 +20,14 @@ namespace Pizzaboxdata.Data
         /// Initializes a new restaurant repository given a suitable Entity Framework DbContext.
         /// </summary>
         /// <param name="db">The DbContext</param>
-        public PizzaRepository(PizzaContext PC)
+        public PizzaRepository()
         {
-            PC = PC ?? throw new ArgumentNullException(nameof(PC));
+            PC = new PizzaContext();
+            
+        }
+        ~PizzaRepository()
+        {
+            PC.Dispose();
         }
 
         /* I dont know how to fix this error so I am disabling
@@ -210,6 +215,13 @@ namespace Pizzaboxdata.Data
                 PC.PizzaTable.Add(P);
                 PC.SaveChanges();
             }
+        }
+
+        public OrderTable searchbyLocation(string loc)
+        {
+            OrderTable x;
+            x = (OrderTable)PC.OrderTable.Where<OrderTable>(u => u.LocationFk.Equals(loc));
+            return x;
         }
 
 

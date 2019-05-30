@@ -35,10 +35,7 @@ namespace PizzaWebsite.Controllers
         {
             return View();
         }
-        public IActionResult AdminLogin()
-        {
-            return View();
-        }
+        
 
         
 
@@ -62,10 +59,7 @@ namespace PizzaWebsite.Controllers
 
         //logic for admin page, it should only show if the user is an admin and is correctly logged in
        
-        public IActionResult UserOption()
-        {
-            return View();
-        }
+      
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

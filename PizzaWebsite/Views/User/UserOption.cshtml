@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Http.Extensions;
+@using Microsoft.AspNetCore.Mvc;
+
+@model PizzaWebsite.Models.UserModel
+@{
+    ViewData["Title"] = "UserOptions";
+}
+<div class="text-center">
+    <h1 class="display-4">Hi @ViewData["username"], What would you like to do?</h1>
+    <h2>@Html.ActionLink("Show Locations", "UserLocation", "Location")</h2>
+    <h2>@Html.ActionLink("Log Out", "Index", "Home")</h2>
+    <h2>@Html.ActionLink("View History", "UserHistory", "User")</h2>
+    <!--
+     This is the card coded way of creating a link in HTML to another page without using razor syntax
+
+     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login"><button>Login</button></a>
+     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register"><button>Register</button></a>
+
+    -->
+</div>

@@ -9,8 +9,10 @@ namespace PizzaWebsite.Models
     public class LocationModel
     {
 
-        [Required]
-        public string location { get; set; }
+        [Display(Name = "Location")]
+        public string Location { get; set; }
+
+       
 
     }
 

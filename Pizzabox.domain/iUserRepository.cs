@@ -10,5 +10,6 @@ namespace Pizzaboxdomain
         /// return usernames as a list of strings.
         /// </summary>
         bool register(string username, string password);
+        bool login(string username, string password);
     }
 }

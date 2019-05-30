@@ -34,11 +34,26 @@ namespace PizzaWebsite
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                // Make the session cookie essential
+                options.Cookie.IsEssential = true;
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPizzaRepository, PizzaRepository>();
-
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".AdventureWorks.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.IsEssential = true;
+            });
             services.AddDbContext<Pizzaboxdata.Data.PizzaContext>(optionsAction => optionsAction.UseSqlServer(Configuration.GetConnectionString("PizzaContext")));
         }
 
@@ -59,6 +74,7 @@ namespace PizzaWebsite
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
