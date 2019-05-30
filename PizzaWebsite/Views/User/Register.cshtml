@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Register Page";
+    string NextPage = "Login"; <!-- string used to point action link to the right page-->
+
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form action="@NextPage" target="_self" method="post">
+
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+
+
+        <input type="submit" value="Register" uiactions="collapse">
+
+    </form>
+</div>
+
+
+

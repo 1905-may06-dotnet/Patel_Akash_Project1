@@ -1,0 +1,48 @@
+﻿@model Pizzaboxdata.Data.OrderTable
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>OrderTable</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrderIdPk" class="control-label"></label>
+                <input asp-for="OrderIdPk" class="form-control" />
+                <span asp-validation-for="OrderIdPk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsernameFk" class="control-label"></label>
+                <select asp-for="UsernameFk" class ="form-control" asp-items="ViewBag.UsernameFk"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderTotalCost" class="control-label"></label>
+                <input asp-for="OrderTotalCost" class="form-control" />
+                <span asp-validation-for="OrderTotalCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderDateTime" class="control-label"></label>
+                <input asp-for="OrderDateTime" class="form-control" />
+                <span asp-validation-for="OrderDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocationFk" class="control-label"></label>
+                <select asp-for="LocationFk" class ="form-control" asp-items="ViewBag.LocationFk"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

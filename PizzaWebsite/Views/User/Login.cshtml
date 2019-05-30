@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+    string AdminOrUser = "UserOption"; <!-- string used to point action link to the right page-->
+
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form action="@AdminOrUser" target="_self" method="post">
+
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        
+    
+<input type="submit" value="Login" uiactions="collapse">
+
+    </form>
+</div>
+
+
+

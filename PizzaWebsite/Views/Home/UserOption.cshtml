@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "User Options Page";
+    String username = ""; <!-- get the user's name-->
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hi @username , What would you like to do?</h1>
+    <h2>@Html.ActionLink("Show Locations", "UserLocation", "Home")</h2>
+    <h2>@Html.ActionLink("Log Out", "Index", "Home")</h2>
+    <h2>@Html.ActionLink("View History", "UserHistory", "Home")</h2>
+    <!--
+     This is the card coded way of creating a link in HTML to another page without using razor syntax
+
+     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login"><button>Login</button></a>
+     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register"><button>Register</button></a>
+
+    -->
+</div>

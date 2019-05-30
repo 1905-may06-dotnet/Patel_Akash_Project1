@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "AdminLocation";
+}
+
+<form target="AdminData" method="post">
+    <p>Location Name</p>
+    <select name="Location">
+        <option value="1111 west pine street">1111 west pine street</option>
+        <option value="7373 east shoulder avenue">7373 east shoulder avenue</option>
+        <option value="8787 harbor road">8787 harbor road</option>
+    </select>
+    <br><br />
+    <input type="submit" value="confirm location" />
+</form>
+<h2>@Html.ActionLink("Log Out", "Index", "Home")</h2>
+<!--
+ This is the card coded way of creating a link in HTML to another page without using razor syntax
+
+ <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login"><button>Login</button></a>
+ <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register"><button>Register</button></a>
+
+-->

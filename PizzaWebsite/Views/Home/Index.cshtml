@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome to the PizzaBox Website</h1>
+        <h2>@Html.ActionLink("Login", "Login", "User")</h2>
+        <h2>@Html.ActionLink("Register", "Register", "User")</h2>
+        <h2>@Html.ActionLink("Admin Login", "AdminLogin", "User")</h2>
+        <!--
+     This is the card coded way of creating a link in HTML to another page without using razor syntax
+
+     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login"><button>Login</button></a>
+     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register"><button>Register</button></a>
+
+    -->
+    </div>
