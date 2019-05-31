@@ -80,6 +80,8 @@ namespace PizzaWebsite.Controllers
                     ViewBag.Message = pizUser.username;
                     //initialize pizzacounter variable when user logs in
                     HttpContext.Session.SetInt32("pizzacounter", 0);
+                    //initialize pizzacost counter variable when user logs in
+                    HttpContext.Session.SetString("pizzacost", "0.0");
                     return RedirectToAction("UserOption");
                     
                 }

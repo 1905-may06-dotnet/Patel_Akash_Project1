@@ -13,11 +13,12 @@ namespace Pizzaboxdomain
        public bool isValidOrder = true;
        public DateTime OrderDatetime;
 
+
         //this function gets us the cost for our order
         public double gettotalpizzacost()
         {
             //intialize cost to zero
-            double cost = 0.0;
+            double cost=0;
             //intialize for loop index to 0
             int i = 0;
             //loop through all the pizzas and calculate their cost individually

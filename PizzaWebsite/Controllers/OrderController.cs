@@ -102,7 +102,14 @@ namespace PizzaWebsite.Controllers
             HttpContext.Session.SetInt32("pizzacount", tempOrder.getCount());
             ViewData["count"] = HttpContext.Session.GetInt32("pizzacount");
             //find out what our cost is at, in string form for some reason i can't explain
-            HttpContext.Session.SetString("pizzacost", tempOrder.gettotalpizzacost().ToString());
+            //get current cost total
+            string currentcoststring = HttpContext.Session.GetString("pizzacost");
+            //convert current cost to double
+            double currentcostdouble = Convert.ToDouble(currentcoststring);
+            //add current double cost with our new cost double
+            double nextcostdouble = currentcostdouble + tempOrder.gettotalpizzacost();
+            //save new cost to session
+            HttpContext.Session.SetString("pizzacost", nextcostdouble.ToString());
             ViewData["cost"] = HttpContext.Session.GetString("pizzacost");
             return View();
 
@@ -156,7 +163,14 @@ namespace PizzaWebsite.Controllers
             HttpContext.Session.SetInt32("pizzacount", tempOrder.getCount());
             ViewData["count"] = HttpContext.Session.GetInt32("pizzacount");
             //find out what our cost is at, in string form for some reason i can't explain
-            HttpContext.Session.SetString("pizzacost", tempOrder.gettotalpizzacost().ToString());
+            //get current cost total
+            string currentcoststring = HttpContext.Session.GetString("pizzacost");
+            //convert current cost to double
+            double currentcostdouble = Convert.ToDouble(currentcoststring);
+            //add current double cost with our new cost double
+            double nextcostdouble = currentcostdouble + tempOrder.gettotalpizzacost();
+            //save new cost to session
+            HttpContext.Session.SetString("pizzacost", nextcostdouble.ToString());
             ViewData["cost"] = HttpContext.Session.GetString("pizzacost");
             return View();
 
@@ -205,11 +219,15 @@ namespace PizzaWebsite.Controllers
         //load userpreset without going through logic
         public IActionResult UserPreset()
         {
+            ViewData["count"] = HttpContext.Session.GetInt32("pizzacount");
+            ViewData["cost"] = HttpContext.Session.GetString("pizzacost");
             return View();
         }
 
         public IActionResult UserCustom()
         {
+            ViewData["count"] = HttpContext.Session.GetInt32("pizzacount");
+            ViewData["cost"] = HttpContext.Session.GetString("pizzacost");
             return View();
         }
 
