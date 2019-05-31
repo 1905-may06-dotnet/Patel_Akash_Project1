@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "CustomOrPreset";
 }
-<h1>@ViewData["username"], you are ordering at location @ViewData["location"]. Do you want a custom or Preset Pizza?</h1>
+<h1>@ViewData["username"], you are ordering at "@ViewData["location"]". Do you want a custom or Preset Pizza?</h1>
 
-<h2>@Html.ActionLink("Custom Order", "UserCustom", "Home")</h2>
-<h2>@Html.ActionLink("Preset Order", "UserPreset", "Home")</h2>
+<h2>@Html.ActionLink("Custom Order", "UserCustom", "Order")</h2>
+<h2>@Html.ActionLink("Preset Order", "UserPreset", "Order")</h2>

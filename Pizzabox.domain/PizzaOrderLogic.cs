@@ -63,9 +63,19 @@ namespace Pizzaboxdomain
             Console.WriteLine("this method has not been implemented");
         }
 
+        public int getCount()
+        {
+            int count = 0;
+            foreach(var item in pizzalist)
+            {
+                count += item.quantity;
+            }
+            return count;
+        }
+
         public bool checkCount()
         {
-            if(pizzalist.Count>100)
+            if(getCount()>100)
             {
                 return false;
             }

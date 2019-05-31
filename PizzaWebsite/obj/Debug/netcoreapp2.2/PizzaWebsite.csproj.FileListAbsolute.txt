@@ -33,7 +33,6 @@ C:\Revature\Patel_Akash_Project0\PizzaWebsite\bin\Debug\netcoreapp2.2\Pizzaboxdo
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\bin\Debug\netcoreapp2.2\Pizzaboxdata.pdb
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\bin\Debug\netcoreapp2.2\Pizzaboxdomain.pdb
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\Home\View.g.cshtml.cs
-C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\Home\UserPreview.g.cshtml.cs
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\OrderTables\Create.g.cshtml.cs
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\OrderTables\Delete.g.cshtml.cs
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\OrderTables\Details.g.cshtml.cs
@@ -50,3 +49,4 @@ C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\View
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\Order\CustomOrPreset.g.cshtml.cs
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\Order\UserCustom.g.cshtml.cs
 C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\Order\UserPreset.g.cshtml.cs
+C:\Revature\Patel_Akash_Project0\PizzaWebsite\obj\Debug\netcoreapp2.2\Razor\Views\Order\UserPreview.g.cshtml.cs

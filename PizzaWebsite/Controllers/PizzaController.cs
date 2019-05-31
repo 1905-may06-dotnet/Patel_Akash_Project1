@@ -23,28 +23,8 @@ namespace PizzaWebsite.Controllers
         }
 
        
+       
+
         
-
-       Models.PizzaModel user;
-       List<Models.PizzaModel> UserList = new List<Models.PizzaModel>();
-
-        public ActionResult UserPreset(Models.PizzaModel pizzamodel)
-        {
-            bool temp = false;
-
-            Pizzaboxdomain.Pizza piz = new Pizza();
-            piz.crust = pizzamodel.PizzaCrust;
-            piz.size = pizzamodel.PizzaSize;
-            piz.quantity = pizzamodel.PizzaQuantity;
-            List<String> templist = new List<string>() { pizzamodel.PizzaTopping1, pizzamodel.PizzaTopping2, pizzamodel.PizzaTopping3, pizzamodel.PizzaTopping4, pizzamodel.PizzaTopping5 };
-            //remove blank entries from templist
-            templist = templist.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
-            piz.toppings = templist;
-            //create pizzastring
-            piz.PizzaString = piz.showPizza();
-
-            return View();
-
-        }
     }
 }

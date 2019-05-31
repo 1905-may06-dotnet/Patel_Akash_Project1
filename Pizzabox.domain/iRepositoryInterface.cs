@@ -95,7 +95,10 @@ namespace Pizzaboxdomain
             /// </summary>
             void Save();
 
-        
+        void AddPizzaOrder(PizzaOrder pizzaOrder, PizzaUser user);
+
+
+
     }
     
 

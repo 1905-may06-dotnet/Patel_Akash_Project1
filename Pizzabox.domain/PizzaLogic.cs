@@ -72,11 +72,37 @@ namespace Pizzaboxdomain
             string constring = ""; //string to contain list of all the toppings customer has ordered
             foreach (string str in toppings)
             {
-                constring += str + ", ";
+                constring += str + " ";
             }
 
             //return full description of the pizza, this is also what will be stored in SQL.
-            return($"size: {size}, crust: {crust}, toppings: {constring} and quantity: {quantity}");
+            return($"size={size}:crust={crust}:toppings={constring}:quantity={quantity}");
+        }
+
+        public Pizza recreatePizza(string pizzastring)
+        {
+            Pizza piz = new Pizza();
+            string[] pizattributes = pizzastring.Split(':');
+            //0 = size, 1=crust, 2=toppings, 3=quantity
+            string[] size = pizattributes[0].Split('=');
+            piz.size = size[1];
+
+            string[] crust = pizattributes[1].Split('=');
+            piz.crust = crust[1];
+
+            string[] quantity = pizattributes[3].Split('=');
+            piz.quantity = System.Convert.ToInt32(quantity[1]);
+
+            //last part is troublesome, gotta loop through and add the toppings to a list
+            //first gotta prepare the data by removing toppings=
+            string[] toppinglist = pizattributes[2].Split('=');
+            string[] toppingattributes = toppinglist[1].Split(' ');
+
+            foreach (var toppings in toppingattributes)
+            {
+                piz.toppings.Add(toppings);
+            }
+            return piz;
         }
 
 

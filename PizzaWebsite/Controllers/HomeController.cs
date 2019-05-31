@@ -43,10 +43,7 @@ namespace PizzaWebsite.Controllers
         {
             return View();
         }
-        public IActionResult UserCustom()
-        {
-            return View();
-        }
+      
         public IActionResult UserPreview()
         {
             return View();

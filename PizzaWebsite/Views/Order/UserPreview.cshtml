@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "UserPreview";
+}
+
+<h1>UserPreview</h1>
+<p>Your order has "@ViewData["count"]" pizzas and costs "@ViewData["cost"]" dollars.</p>
+
+
+
+<form target="_self" method="post">
+    <br><br>
+    <input type="submit" value="Confirm Order" />
+</form>
+
+
+
+
+<h2>@Html.ActionLink("Confirm Order", "UserOption", "User")</h2>
+
+<h2>@Html.ActionLink("Cancel Order", "Login", "User")</h2>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -2,13 +2,6 @@
 @{
     ViewData["Title"] = "Preset Pizza";
 }
-@ViewBag;
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
-
-
 
 @{
     ViewData["Title"] = "UserPreset";
@@ -17,18 +10,52 @@
 <h1>Order a Preset Pizza</h1>
 
 <form target="_self" method="post">
-    <p>Pizza Name</p>
-    <select name="Pizza">
-        <option value="LargeVeg">5ToppingLargeVeg</option>
-        <option value="SmallPizza">2ToppingSmallPizza</option>
+    <p><b>5 Topping Large Vegetarian Pizza</b></p>
+
+    <p>Pizza Size</p>
+    <select name="PizzaSize">
+        <option value="l">Large</option>
     </select>
     <br><br>
+    <p>Pizza Crust</p>
+    <select name="PizzaCrust">
+        <option value="l">Thick</option>
+    </select>
+    <br><br>
+    <p>Pizza Toppings</p>
+    <select name="PizzaTopping1">
+        <option value="Mushrooms">Mushrooms</option>
+    </select>
+    <br><br>
+    <select name="PizzaTopping2">
+        <option value="Onions">Onions</option>
+    </select>
+    <br><br>
+    <select name="PizzaTopping3">
+        <option value="Bellpepper">Bellpepper</option>
+    </select>
+    <br><br>
+    <select name="PizzaTopping4">
+        <option value="Spinach">Spinach</option>
+    </select>
+    <br><br>
+    <select name="PizzaTopping5">
+        <option value="Jalepenos">Jalepenos</option>
+    </select>
+
+
+    <br><br>
     <p>Pizza Quantity</p>
-    <input type="number" max="100" min="1" />
+    <input type="number" max="100" min="1" name="PizzaQuantity" />
     <br><br>
     <input type="submit" value="Add Pizza(s)" />
 </form>
-<p>Your current total cost is " ".</p>
+<p>Your current total cost is "@ViewData["cost"]".</p>
+<p>Your current total pizza count is "@ViewData["count"]".</p>
 
-<h2>@Html.ActionLink("Order More?", "CustomOrPreset", "Home")</h2>
-<h2>@Html.ActionLink("Finish Order", "UserPreview", "Home")</h2>
+<h2>@Html.ActionLink("Order More?", "CustomOrPreset", "Order")</h2>
+<h2>@Html.ActionLink("Finish Order", "UserPreview", "Order")</h2>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
