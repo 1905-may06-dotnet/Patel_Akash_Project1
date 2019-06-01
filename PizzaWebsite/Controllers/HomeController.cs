@@ -49,11 +49,7 @@ namespace PizzaWebsite.Controllers
             return View();
         }
 
-        public IActionResult AdminData()
-        {
-            return View();
-        }
-
+        
         //logic for admin page, it should only show if the user is an admin and is correctly logged in
        
       

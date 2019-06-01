@@ -217,11 +217,13 @@ namespace Pizzaboxdata.Data
             }
         }
 
-        public OrderTable searchbyLocation(string loc)
+        public List<PizzaOrder> searchbyLocation(string loc)
         {
-            OrderTable x;
-            x = (OrderTable)PC.OrderTable.Where<OrderTable>(u => u.LocationFk.Equals(loc));
-            return x;
+            var x = PC.OrderTable.Where<OrderTable>(u => u.LocationFk.Equals(loc));
+
+            var y = x.Select(order => Mapper.Map(order)).ToList();
+
+            return y;
         }
 
 

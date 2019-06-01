@@ -96,6 +96,7 @@ namespace Pizzaboxdomain
             void Save();
 
         void AddPizzaOrder(PizzaOrder pizzaOrder, PizzaUser user);
+        List<PizzaOrder> searchbyLocation(string loc);
 
 
 
