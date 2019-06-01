@@ -12,9 +12,8 @@ namespace PizzaWebsite.Models
             OrderDateTime = pizorder.OrderDatetime,
             Location = pizorder.LocationAddress,
             OrderTotalCost = pizorder.totalpizzacost,
-            //i dont have username as part of my pizorder class
-            //Username = pizorder.username
-            
+            Username = pizorder.username,
+            OrderID = pizorder.orderID
         };
 
     }

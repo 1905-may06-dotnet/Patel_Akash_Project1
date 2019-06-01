@@ -13,6 +13,8 @@ namespace Pizzaboxdata.Data
             LocationAddress = orderTable.LocationFk,
             totalpizzacost = (double)orderTable.OrderTotalCost,
             OrderDatetime = (DateTime)orderTable.OrderDateTime,
+            orderID = (int)orderTable.OrderIdPk,
+            username = orderTable.UsernameFk
         };
 
 
@@ -26,7 +28,9 @@ namespace Pizzaboxdata.Data
         {
             LocationFk = pizzaOrder.LocationAddress,
             OrderTotalCost = pizzaOrder.totalpizzacost,
-            OrderDateTime = pizzaOrder.OrderDatetime
+            OrderDateTime = pizzaOrder.OrderDatetime,
+            OrderIdPk = pizzaOrder.orderID,
+            UsernameFk = pizzaOrder.username
 
         };
 

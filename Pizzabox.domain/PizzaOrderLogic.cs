@@ -12,6 +12,9 @@ namespace Pizzaboxdomain
        public List<Pizza> pizzalist = new List<Pizza>();
        public bool isValidOrder = true;
        public DateTime OrderDatetime;
+       public int orderID;
+       public string username;
+
 
 
         //this function gets us the cost for our order

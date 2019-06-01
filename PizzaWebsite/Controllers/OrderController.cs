@@ -37,12 +37,18 @@ namespace PizzaWebsite.Controllers
         }
 
 
-        public ActionResult AdminData(Models.LocationModel loc)
+        public ActionResult AdminOrderData(Models.LocationModel loc)
         {
 
-            List<PizzaOrder> x = PC.searchbyLocation(loc.Location);
-            //var y = mapper.map(x)
-            return View(/*y*/);
+            List<Pizzaboxdomain.PizzaOrder> x = PC.searchbyLocation(loc.Location);
+            List<PizzaWebsite.Models.OrderModel> y = new List<PizzaWebsite.Models.OrderModel>();
+            foreach(var item in x)
+            {
+                y.Add(PizzaWebsite.Models.ModelMapper.Map(item));
+            }
+            ViewData["adminlocation"] = HttpContext.Session.GetString("adminlocation");
+            
+            return View(y);
         }
 
         //page that routes user to make either a custom or preset pizza;
@@ -242,7 +248,14 @@ namespace PizzaWebsite.Controllers
             return View();
         }
 
- 
+        //lets admin pick which thing they wanna see
+        public ActionResult AdminSelection(Models.LocationModel loc)
+        {
+            ViewData["adminlocation"] = HttpContext.Session.GetString("adminlocation");
+            return View(loc);
+        }
+
+
 
 
 

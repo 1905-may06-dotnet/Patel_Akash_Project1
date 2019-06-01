@@ -1,0 +1,23 @@
+﻿@model PizzaWebsite.Models.LocationModel
+@{
+    ViewData["Title"] = "AdminLocation";
+}
+
+<h1>Admin Selection for Location: @ViewData["adminlocation"]</h1>
+
+<form asp-action="AdminOrderData" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Location" class="control-label"></label>
+        <span asp-validation-for="Location" class="text-danger"></span>
+        <select asp-for="Location" class="control-label">
+        <option value="@ViewData["adminlocation"]">Orders</option>
+        </select>
+    </div>
+
+    <input type="submit" value="AdminOrderData" />
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

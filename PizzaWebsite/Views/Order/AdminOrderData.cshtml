@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PizzaWebsite.Models.OrderModel>
+
+@{
+    ViewData["Title"] = "AdminOrderData";
+}
+
+<h1>Admin Order Data at Location: @ViewData["adminlocation"]</h1>
+<h1>@Html.ActionLink("Return To Locations", "AdminLocation", "Location")</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderTotalCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderTotalCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

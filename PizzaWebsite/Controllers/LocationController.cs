@@ -32,9 +32,12 @@ namespace PizzaWebsite.Controllers
         public ActionResult AdminLocation(Models.LocationModel loc)
         {
             Pizzaboxdomain.PizzaLocations pizLoc = new Pizzaboxdomain.PizzaLocations();
-            return RedirectToAction("AdminData", "Order");
+            HttpContext.Session.SetString("adminlocation", loc.Location);
+            return RedirectToAction("AdminSelection", "Order", loc);
 
         }
+
+        
 
 
         public ActionResult AdminLocation()
