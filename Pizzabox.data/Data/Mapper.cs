@@ -52,7 +52,32 @@ namespace Pizzaboxdata.Data
             UsernamePk = user.username
         };
 
-        
+        public static LocationTable Map(Pizzaboxdomain.PizzaLocations loc) => new LocationTable
+        {
+            PizzaCheese = loc.PizzaCheese,
+            PizzaDough = loc.PizzaDough,
+            PizzaSauce = loc.PizzaSauce,
+            Mushrooms = loc.Mushrooms,
+            Onions = loc.onions,
+            Bellpepper = loc.bellpeppers,
+            Jalapeno = loc.jalapeno,
+            Spinache = loc.spinach
+
+        };
+
+        public static Pizzaboxdomain.PizzaLocations Map(LocationTable loc) => new Pizzaboxdomain.PizzaLocations
+        {
+            PizzaCheese = (int)loc.PizzaCheese,
+            PizzaDough = (int)loc.PizzaDough,
+            PizzaSauce = (int)loc.PizzaSauce,
+            Mushrooms = (int)loc.Mushrooms,
+            onions = (int)loc.Onions,
+            bellpeppers = (int)loc.Bellpepper,
+            jalapeno = (int)loc.Jalapeno,
+            spinach = (int)loc.Spinache
+        };
+
+
 
     }
 }

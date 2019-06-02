@@ -51,6 +51,38 @@ namespace PizzaWebsite.Controllers
             return View(y);
         }
 
+        public ActionResult AdminInventoryData(Models.LocationModel loc)
+        {
+            ViewData["adminlocation"] = HttpContext.Session.GetString("adminlocation");
+            var x = PC.getInventorybyloc(loc.Location);
+            PizzaWebsite.Models.LocationModel y = PizzaWebsite.Models.ModelMapper.Map(x);
+            return View(y);
+        }
+
+        public ActionResult AdminUserData(Models.LocationModel loc)
+        {
+          ViewData["adminlocation"] = HttpContext.Session.GetString("adminlocation");
+            var x = PC.getUserbyloc(loc.Location);
+            List<PizzaWebsite.Models.OrderModel> y = new List<PizzaWebsite.Models.OrderModel>();
+            foreach (var item in x)
+            {
+                
+                y.Add(PizzaWebsite.Models.ModelMapper.Map(item));
+            }
+
+            List<string> userlist = new List<string>();
+
+            for(int i = 0; i<y.Count(); i++)
+            {
+                userlist.Add(y[i].Username);
+            }
+            userlist.Distinct();
+
+            return View(userlist);
+
+        }
+
+
         //page that routes user to make either a custom or preset pizza;
         public IActionResult CustomOrPreset()
         {

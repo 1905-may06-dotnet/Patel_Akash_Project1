@@ -8,14 +8,34 @@
 <form asp-action="AdminOrderData" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
-        <label asp-for="Location" class="control-label"></label>
-        <span asp-validation-for="Location" class="text-danger"></span>
         <select asp-for="Location" class="control-label">
         <option value="@ViewData["adminlocation"]">Orders</option>
         </select>
     </div>
 
-    <input type="submit" value="AdminOrderData" />
+    <input type="submit" value="Admin Order Data" />
+</form>
+
+<form asp-action="AdminInventoryData" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <select asp-for="Location" class="control-label">
+            <option value="@ViewData["adminlocation"]">Inventory</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Admin Inventory Data" />
+</form>
+
+<form asp-action="AdminUserData" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <select asp-for="Location" class="control-label">
+            <option value="@ViewData["adminlocation"]">Users</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Admin User Data" />
 </form>
 
 @section Scripts {

@@ -1,8 +1,47 @@
-﻿
+﻿@model IEnumerable<PizzaWebsite.Models.OrderModel>
+
 @{
     ViewData["Title"] = "UserHistory";
 }
 
-<h1>UserHistory</h1>
-<h2>@Html.ActionLink("User Options", "UserOption", "User")</h2>
+<h1>User History for @ViewData["username"]</h1>
 
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderTotalCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDateTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderTotalCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDateTime)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

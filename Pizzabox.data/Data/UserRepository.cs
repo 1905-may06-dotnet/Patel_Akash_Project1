@@ -110,6 +110,15 @@ namespace Pizzaboxdata.Data
             
         }
 
+        public List<PizzaOrder> searchbyUsername(string username)
+        {
+            var x = PC.OrderTable.Where<OrderTable>(u => u.UsernameFk.Equals(username));
+
+            var y = x.Select(order => Mapper.Map(order)).ToList();
+
+            return y;
+        }
+
 
     }
 

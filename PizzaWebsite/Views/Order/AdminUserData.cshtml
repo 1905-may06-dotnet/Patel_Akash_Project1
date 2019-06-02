@@ -1,0 +1,29 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "AdminUserData";
+}
+
+<h1>Admin User Data at Location: @ViewData["adminlocation"]</h1>
+<h1>@Html.ActionLink("Return To Locations", "AdminLocation", "Location")</h1>
+
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <b>Username</b>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -10,6 +10,15 @@ namespace Pizzaboxdomain
         //contains a list of all current locations
         List<string> locations = new List<string>();
         public string current = "";
+        public int PizzaDough;
+        public int PizzaCheese;
+        public int PizzaSauce;
+        public int Mushrooms;
+        public int onions;
+        public int bellpeppers;
+        public int spinach;
+        public int jalapeno;
+          
 
         public PizzaLocations()
         {

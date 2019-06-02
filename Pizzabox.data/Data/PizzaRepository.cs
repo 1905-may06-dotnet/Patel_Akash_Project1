@@ -226,6 +226,31 @@ namespace Pizzaboxdata.Data
             return y;
         }
 
+        public List<PizzaOrder> searchbyUsername(string username)
+        {
+            var x = PC.OrderTable.Where<OrderTable>(u => u.UsernameFk.Equals(username));
+
+            var y = x.Select(order => Mapper.Map(order)).ToList();
+
+            return y;
+        }
+
+        public PizzaLocations getInventorybyloc(string loc)
+        {
+            var x = PC.LocationTable.Where<LocationTable>(u => u.LocationPk.Equals(loc)).FirstOrDefault();
+            var y = Mapper.Map(x);
+            return y;
+        }
+
+        public List<PizzaOrder> getUserbyloc(string loc)
+        {
+            var x = PC.OrderTable.Where<OrderTable>(u => u.LocationFk.Equals(loc));
+            
+            var y = x.Select(order => Mapper.Map(order)).ToList();
+            return y;
+
+        }
+
 
     }
 }

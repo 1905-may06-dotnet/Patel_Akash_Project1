@@ -131,7 +131,17 @@ namespace PizzaWebsite.Controllers
 
         public IActionResult UserHistory()
         {
-            return View();
+            ViewData["username"] = HttpContext.Session.GetString("username");
+            string username = HttpContext.Session.GetString("username");
+            List<Pizzaboxdomain.PizzaOrder> x = PC.searchbyUsername(username);
+            List<PizzaWebsite.Models.OrderModel> y = new List<PizzaWebsite.Models.OrderModel>();
+            foreach (var item in x)
+            {
+                y.Add(PizzaWebsite.Models.ModelMapper.Map(item));
+            }
+            
+
+            return View(y);
         }
 
 

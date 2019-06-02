@@ -1,0 +1,71 @@
+﻿@model PizzaWebsite.Models.LocationModel
+
+@{
+    ViewData["Title"] = "AdminInventoryData";
+}
+
+<h1>Admin Inventory Data for Location: @ViewData["adminlocation"]</h1>
+<h1>@Html.ActionLink("Return To Locations", "AdminLocation", "Location")</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaDough)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaCheese)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PizzaSauce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mushrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Onions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bellpeppers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spinach)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jalapenos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.PizzaDough)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.PizzaCheese)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.PizzaSauce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Mushrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Onions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Bellpeppers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Spinach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.Jalapenos)
+            </td>
+           
+        </tr>
+
+    </tbody>
+</table>

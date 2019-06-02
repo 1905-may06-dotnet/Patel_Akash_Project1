@@ -11,5 +11,7 @@ namespace Pizzaboxdomain
         /// </summary>
         bool register(string username, string password);
         bool login(string username, string password);
+
+        List<PizzaOrder> searchbyUsername(string username);
     }
 }

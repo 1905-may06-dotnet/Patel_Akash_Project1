@@ -16,5 +16,17 @@ namespace PizzaWebsite.Models
             OrderID = pizorder.orderID
         };
 
+        public static LocationModel Map(Pizzaboxdomain.PizzaLocations pizloc) => new LocationModel
+        {
+            PizzaCheese = pizloc.PizzaCheese,
+            PizzaDough = pizloc.PizzaDough,
+            PizzaSauce = pizloc.PizzaSauce,
+            Bellpeppers = pizloc.bellpeppers,
+            Mushrooms = pizloc.Mushrooms,
+            Jalapenos = pizloc.jalapeno,
+            Spinach = pizloc.spinach,
+            Onions = pizloc.onions
+        };
+
     }
 }
