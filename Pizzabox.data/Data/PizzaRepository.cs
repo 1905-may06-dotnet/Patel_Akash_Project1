@@ -260,6 +260,76 @@ namespace Pizzaboxdata.Data
 
         }
 
+        public bool CheckOrderConditions(string Location, string username)
+        {
+            //initialize booleans to check all order conditions
+            DateTime lastOrder;
+
+
+            //this method is a bit wonky
+            int compare = 0; //int used to determine if user has ordered within last two hours
+                             //Check if it has been 2 hours since the user last ordered a pizza
+
+            //step 1 determine when the user's last order was
+            //get the row of their last order by using firstordefault in conduction with an order by
+            OrderTable x = PC.OrderTable.Where<OrderTable>(u => u.UsernameFk == username).OrderByDescending(y => y.OrderDateTime).FirstOrDefault<OrderTable>();
+
+            //check to see if the user had a last order at all
+            if (x == null)
+            {
+                return true;
+            }
+            else
+            {
+                //cast datetime in database to datetime time.
+                lastOrder = (DateTime)x.OrderDateTime;
+
+                //compare users last order plus 2 hours to current time.
+                compare = (DateTime.Now).CompareTo(lastOrder.AddHours(2.00));
+                if (compare >= 0)
+                {
+                    //this means that the users last order was at least 2 hours ago
+                    //so now we need to check if they are ordering at the same place
+                }
+                else
+                {
+                    //this means the user has ordered within the last 2 hours
+                    return false;
+                   
+                }
+            }
+
+            //if the users last order more than 2 hours ago, make sure they are ordering at the same place
+            compare = 0; //reset int compare to zero
+            compare = (DateTime.Now).CompareTo(lastOrder.AddHours(24.00));
+            if (compare >= 0)
+            {
+                //this means that the users last order was at least 24 hours ago
+                return true;
+            }
+            else
+            {
+                //this means the user has ordered within the last 24 hours so we need to 
+                //make sure they are ordering at the same location
+                x = PC.OrderTable.Where<OrderTable>(u => u.LocationFk == Location).OrderByDescending(y => y.OrderDateTime).FirstOrDefault<OrderTable>();
+                if(x.LocationFk.Equals(Location))
+                {
+                    //this means they are ordering at the same place, so its ok
+                    return true;
+                }
+                else
+                {
+                    //this means they are ordering at a different place so its not ok
+                    return false;
+                }
+
+
+            }
+
+
+            
+        }
+
 
     }
 }

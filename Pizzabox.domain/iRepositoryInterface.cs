@@ -100,6 +100,8 @@ namespace Pizzaboxdomain
         PizzaLocations getInventorybyloc(string loc);
         List<PizzaOrder> getUserbyloc(string loc);
 
+        bool CheckOrderConditions(string Location, string username);
+
 
 
     }

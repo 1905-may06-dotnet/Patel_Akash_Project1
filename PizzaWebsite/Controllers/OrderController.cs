@@ -256,7 +256,17 @@ namespace PizzaWebsite.Controllers
             PizzaUser pizuser = new PizzaUser();
             pizuser.username = HttpContext.Session.GetString("username");
 
-           bool didorderwork = PC.AddPizzaOrder(finalpizza, pizuser);
+            bool didorderwork = false;
+
+            if(PC.CheckOrderConditions(finalpizza.LocationAddress, pizuser.username))
+            {
+                didorderwork = PC.AddPizzaOrder(finalpizza, pizuser);
+            }
+            else
+            {
+                didorderwork = false;
+            }
+           
 
             if (didorderwork)
             {
@@ -295,8 +305,9 @@ namespace PizzaWebsite.Controllers
             //convert the above to numbers for comparison
             int pizcount = (int)HttpContext.Session.GetInt32("pizzacount");
             double pizcost = Convert.ToDouble(HttpContext.Session.GetString("pizzacost"));
+            bool timecondition = PC.CheckOrderConditions(HttpContext.Session.GetString("location"), HttpContext.Session.GetString("username"));
 
-            if(pizcount>100 || pizcost >5000.00)
+            if (pizcount > 100 || pizcost > 5000.00 || timecondition == false)
             {
                 ViewData["isOrdervalid"] = "Order is invalid";
             }
