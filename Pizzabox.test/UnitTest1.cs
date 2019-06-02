@@ -18,6 +18,39 @@ namespace Pizzabox.test
             Assert.IsTrue(piz.isLoggedin == false);
         }
 
+        //test my method that converts string to pizza
+        public void TestStringConversion()
+        {
+            Pizza piz = new Pizza();
+            piz.crust = "s";
+            piz.size = "l";
+            piz.toppings.Add("mushrooms");
+            piz.toppings.Add("onions");
+            piz.quantity = 1;
+            string pizstring = piz.showPizza();
+
+            Pizza piz2 = piz.recreatePizza(pizstring);
+
+            Assert.IsTrue(piz == piz2);
+
+        }
+
+        public void ReverseTestStringConversion()
+        {
+            Pizza piz = new Pizza();
+            piz.crust = "s";
+            piz.size = "l";
+            piz.toppings.Add("mushrooms");
+            piz.toppings.Add("onions");
+            piz.quantity = 1;
+            string pizstring = "size=1:crust=s:toppings=mushrooms onions:quantity=1:";
+
+            Pizza piz2 = piz.recreatePizza(pizstring);
+
+            Assert.IsTrue(piz == piz2);
+
+        }
+
   
    
 
