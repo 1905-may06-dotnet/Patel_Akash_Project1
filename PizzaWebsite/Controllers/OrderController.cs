@@ -223,6 +223,12 @@ namespace PizzaWebsite.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult UserPreview(Models.OrderModel order)
         {
+            //show what the stats are
+            ViewData["count"] = HttpContext.Session.GetInt32("pizzacount");
+            //find out what our cost is at, in string form for some reason i can't explain
+            HttpContext.Session.GetString("pizzacost");
+            ViewData["cost"] = HttpContext.Session.GetString("pizzacost");
+
             //attempt to push pizza to the database.
             //first create new pizza order
             PizzaOrder finalpizza = new PizzaOrder();
@@ -250,10 +256,19 @@ namespace PizzaWebsite.Controllers
             PizzaUser pizuser = new PizzaUser();
             pizuser.username = HttpContext.Session.GetString("username");
 
-            PC.AddPizzaOrder(finalpizza, pizuser);
+           bool didorderwork = PC.AddPizzaOrder(finalpizza, pizuser);
 
-            //finally try to add the thing to the database
-            return RedirectToAction("login", "user", order);
+            if (didorderwork)
+            {
+                //finally try to add the thing to the database
+                ViewData["isOrdervalid"] = "Order is valid";
+                return RedirectToAction("login", "user", order);
+            }
+            else
+            {
+                ViewData["isOrdervalid"] = "Order is invalid";
+                return View();
+            }
         }
 
         //load userpreset without going through logic
@@ -277,6 +292,20 @@ namespace PizzaWebsite.Controllers
             //find out what our cost is at, in string form for some reason i can't explain
             HttpContext.Session.GetString("pizzacost");
             ViewData["cost"] = HttpContext.Session.GetString("pizzacost");
+            //convert the above to numbers for comparison
+            int pizcount = (int)HttpContext.Session.GetInt32("pizzacount");
+            double pizcost = Convert.ToDouble(HttpContext.Session.GetString("pizzacost"));
+
+            if(pizcount>100 || pizcost >5000.00)
+            {
+                ViewData["isOrdervalid"] = "Order is invalid";
+            }
+            else
+            {
+                ViewData["isOrdervalid"] = "Order is valid";
+            }
+
+          
             return View();
         }
 

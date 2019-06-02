@@ -166,54 +166,63 @@ namespace Pizzaboxdata.Data
         }
 
         //record pizza order to order table and pizza table
-        public void AddPizzaOrder(PizzaOrder pizzaOrder, PizzaUser user)
+        public bool AddPizzaOrder(PizzaOrder pizzaOrder, PizzaUser user)
         {
-            //enter order in the database
-            //step 0, find out what value i want for primary key since SQL wont do it for me
-            int orderID = 0; //initialize order id variable
-
-            OrderTable x = PC.OrderTable.OrderByDescending(y => y.OrderIdPk).FirstOrDefault<OrderTable>();
-            if (x == null)
+            //first determine if the pizzaOrder is legit and can be added
+            if (pizzaOrder.checkCost() && pizzaOrder.checkCount())
             {
-                orderID = 0;
-            }
-            else
-            {
-                orderID = x.OrderIdPk + 1;
-            }
+                //enter order in the database
+                //step 0, find out what value i want for primary key since SQL wont do it for me
+                int orderID = 0; //initialize order id variable
+
+                OrderTable x = PC.OrderTable.OrderByDescending(y => y.OrderIdPk).FirstOrDefault<OrderTable>();
+                if (x == null)
+                {
+                    orderID = 0;
+                }
+                else
+                {
+                    orderID = x.OrderIdPk + 1;
+                }
 
 
 
-            //step 1, enter the Order into the OrderTable
-            OrderTable O = new OrderTable() { UsernameFk = user.username, LocationFk = pizzaOrder.LocationAddress, OrderDateTime = DateTime.Now, OrderTotalCost = pizzaOrder.gettotalpizzacost(), OrderIdPk = orderID };
-            PC.OrderTable.Add(O);
-            PC.SaveChanges();
-
-            
-
-
-
-
-            //step 1.5 find out what value i want for primary key for pizzaDB since SQL wont do it for me
-            int PizzaID = 0;
-            PizzaTable z = PC.PizzaTable.OrderByDescending(y => y.PizzaIdPk).FirstOrDefault<PizzaTable>();
-            if (z == null)
-            {
-                PizzaID = 0;
-            }
-            else
-            {
-                PizzaID = z.PizzaIdPk + 1;
-            }
-
-
-            //step 2, enter the Pizzas into the PizzaTable
-            for (int i = 0; i < pizzaOrder.pizzalist.Count(); i++)
-            {
-
-                PizzaTable P = new PizzaTable() { PizzaString = pizzaOrder.pizzalist[i].showPizza(), PizzaCount = pizzaOrder.pizzalist[i].quantity, OrderIdFk = orderID, PizzaIdPk = PizzaID + i };
-                PC.PizzaTable.Add(P);
+                //step 1, enter the Order into the OrderTable
+                OrderTable O = new OrderTable() { UsernameFk = user.username, LocationFk = pizzaOrder.LocationAddress, OrderDateTime = DateTime.Now, OrderTotalCost = pizzaOrder.gettotalpizzacost(), OrderIdPk = orderID };
+                PC.OrderTable.Add(O);
                 PC.SaveChanges();
+
+
+
+
+
+
+                //step 1.5 find out what value i want for primary key for pizzaDB since SQL wont do it for me
+                int PizzaID = 0;
+                PizzaTable z = PC.PizzaTable.OrderByDescending(y => y.PizzaIdPk).FirstOrDefault<PizzaTable>();
+                if (z == null)
+                {
+                    PizzaID = 0;
+                }
+                else
+                {
+                    PizzaID = z.PizzaIdPk + 1;
+                }
+
+
+                //step 2, enter the Pizzas into the PizzaTable
+                for (int i = 0; i < pizzaOrder.pizzalist.Count(); i++)
+                {
+
+                    PizzaTable P = new PizzaTable() { PizzaString = pizzaOrder.pizzalist[i].showPizza(), PizzaCount = pizzaOrder.pizzalist[i].quantity, OrderIdFk = orderID, PizzaIdPk = PizzaID + i };
+                    PC.PizzaTable.Add(P);
+                    PC.SaveChanges();
+                }
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
