@@ -41,3 +41,4 @@ steps:
     WebAppName: 'PIzzaBoxWeb'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 - task: AzureRmWebAppDeployment@4
+
