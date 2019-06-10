@@ -19,9 +19,9 @@ pool :
 #   vmImage: 'ubuntu-latest'
 variables:
   buildConfiguration: 'Release'
-  pathtosolution: '/blob/master/Pizzabox.client/PizzaBoxSolution.sln' 
-  pathtoproject: '/tree/master/Pizzabox.client'
-  pathtotest: '/tree/master/Pizzabox.test'
+  pathtosolution: 'blob/master/Pizzabox.client' 
+  pathtoproject: 't/tree/master/PizzaWebsite'
+  pathtotest: 'tree/master/Pizzabox.test'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
