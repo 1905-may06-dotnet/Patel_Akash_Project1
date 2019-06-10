@@ -8,7 +8,8 @@ trigger:
 - master
 
 #Configured Build Server from Nick's VM. By default the Default points to empty server, so use Microsoft hosted Agents
-pool : Default
+pool : 
+  VMImage: 'Windows-Latest'
 
 # - dev
 # - staging
