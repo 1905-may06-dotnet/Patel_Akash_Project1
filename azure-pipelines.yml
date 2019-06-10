@@ -19,7 +19,7 @@ pool:
 #   vmImage: 'windows-latest'
 variables:
   buildConfiguration: 'Release'
-  pathtosolution: 'Pizzabox.client/PizzaBoxSolution.sln'
+  pathtosolution: 'PizzaboxSolution.sln'
   pathtoproject: 'PizzaWebsite'
   pathtotest: 'Pizzabox.test'
 
