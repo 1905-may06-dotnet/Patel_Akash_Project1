@@ -37,7 +37,6 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
-    azureSubscription: '47632d35-60f6-4841-9842-7cb3df4b710e'
     appType: 'webApp'
     WebAppName: 'PIzzaBoxWeb'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
