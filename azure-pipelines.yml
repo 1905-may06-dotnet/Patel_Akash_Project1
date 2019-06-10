@@ -20,7 +20,7 @@ pool :
 variables:
   buildConfiguration: 'Release'
   pathtosolution: 'tree/master/Pizzabox.client' 
-  pathtoproject: ''
+  pathtoproject: 'tree/master/Pizzabox.client'
   pathtotest: '/tree/master/Pizzabox.test'
 
 steps:
