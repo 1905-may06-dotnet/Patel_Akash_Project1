@@ -19,8 +19,8 @@ pool :
 #   vmImage: 'ubuntu-latest'
 variables:
   buildConfiguration: 'Release'
-  pathtosolution: 'tree/master/Pizzabox.client' 
-  pathtoproject: 'tree/master/Pizzabox.client'
+  pathtosolution: 'blob/master/Pizzabox.client/PizzaBoxSolution.sln' 
+  pathtoproject: ''
   pathtotest: '/tree/master/Pizzabox.test'
 
 steps:
