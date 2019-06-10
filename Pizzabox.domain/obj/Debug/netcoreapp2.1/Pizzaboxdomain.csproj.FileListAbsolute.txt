@@ -18,3 +18,12 @@ C:\Revature\Patel_Akash_Project0\Pizzabox.domain\obj\Debug\netcoreapp2.1\Pizzabo
 C:\Revature\Patel_Akash_Project0\Pizzabox.domain\bin\Debug\netcoreapp2.1\Pizzaboxdomain.deps.json
 C:\Revature\Patel_Akash_Project0\Pizzabox.domain\bin\Debug\netcoreapp2.1\Pizzaboxdomain.dll
 C:\Revature\Patel_Akash_Project0\Pizzabox.domain\bin\Debug\netcoreapp2.1\Pizzaboxdomain.pdb
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\bin\Debug\netcoreapp2.1\Pizzaboxdomain.deps.json
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\bin\Debug\netcoreapp2.1\Pizzaboxdomain.dll
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\bin\Debug\netcoreapp2.1\Pizzaboxdomain.pdb
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\obj\Debug\netcoreapp2.1\Pizzaboxdomain.csprojAssemblyReference.cache
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\obj\Debug\netcoreapp2.1\Pizzaboxdomain.csproj.CoreCompileInputs.cache
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\obj\Debug\netcoreapp2.1\Pizzaboxdomain.AssemblyInfoInputs.cache
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\obj\Debug\netcoreapp2.1\Pizzaboxdomain.AssemblyInfo.cs
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\obj\Debug\netcoreapp2.1\Pizzaboxdomain.dll
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.domain\obj\Debug\netcoreapp2.1\Pizzaboxdomain.pdb

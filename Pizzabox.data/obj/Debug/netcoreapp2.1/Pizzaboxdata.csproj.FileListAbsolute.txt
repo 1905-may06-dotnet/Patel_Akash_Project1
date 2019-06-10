@@ -23,3 +23,17 @@ C:\Revature\Patel_Akash_Project0\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxd
 C:\Revature\Patel_Akash_Project0\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdomain.dll
 C:\Revature\Patel_Akash_Project0\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdomain.pdb
 C:\Revature\Patel_Akash_Project0\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.csproj.CopyComplete
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdata.deps.json
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdata.runtimeconfig.json
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdata.runtimeconfig.dev.json
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdata.dll
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdata.pdb
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdomain.dll
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\bin\Debug\netcoreapp2.1\Pizzaboxdomain.pdb
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.csprojAssemblyReference.cache
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.csproj.CoreCompileInputs.cache
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.AssemblyInfoInputs.cache
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.AssemblyInfo.cs
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.csproj.CopyComplete
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.dll
+C:\Users\Akash\Desktop\Project1\Patel_Akash_Project1\Pizzabox.data\obj\Debug\netcoreapp2.1\Pizzaboxdata.pdb

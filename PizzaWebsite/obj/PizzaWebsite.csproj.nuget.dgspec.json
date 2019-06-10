@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Revature\\Patel_Akash_Project0\\PizzaWebsite\\PizzaWebsite.csproj": {}
+    "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\PizzaWebsite\\PizzaWebsite.csproj": {}
   },
   "projects": {
-    "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.data\\Pizzaboxdata.csproj": {
+    "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.data\\Pizzaboxdata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.data\\Pizzaboxdata.csproj",
+        "projectUniqueName": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.data\\Pizzaboxdata.csproj",
         "projectName": "Pizzaboxdata",
-        "projectPath": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.data\\Pizzaboxdata.csproj",
+        "projectPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.data\\Pizzaboxdata.csproj",
         "packagesPath": "C:\\Users\\Akash\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.data\\obj\\",
+        "outputPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\Pizzaboxdomain.csproj": {
-                "projectPath": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\Pizzaboxdomain.csproj"
+              "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\Pizzaboxdomain.csproj": {
+                "projectPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\Pizzaboxdomain.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\Pizzaboxdomain.csproj": {
+    "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\Pizzaboxdomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\Pizzaboxdomain.csproj",
+        "projectUniqueName": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\Pizzaboxdomain.csproj",
         "projectName": "Pizzaboxdomain",
-        "projectPath": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\Pizzaboxdomain.csproj",
+        "projectPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\Pizzaboxdomain.csproj",
         "packagesPath": "C:\\Users\\Akash\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\obj\\",
+        "outputPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -126,14 +126,14 @@
         }
       }
     },
-    "C:\\Revature\\Patel_Akash_Project0\\PizzaWebsite\\PizzaWebsite.csproj": {
+    "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\PizzaWebsite\\PizzaWebsite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\Patel_Akash_Project0\\PizzaWebsite\\PizzaWebsite.csproj",
+        "projectUniqueName": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\PizzaWebsite\\PizzaWebsite.csproj",
         "projectName": "PizzaWebsite",
-        "projectPath": "C:\\Revature\\Patel_Akash_Project0\\PizzaWebsite\\PizzaWebsite.csproj",
+        "projectPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\PizzaWebsite\\PizzaWebsite.csproj",
         "packagesPath": "C:\\Users\\Akash\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\Patel_Akash_Project0\\PizzaWebsite\\obj\\",
+        "outputPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\PizzaWebsite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -152,11 +152,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.data\\Pizzaboxdata.csproj": {
-                "projectPath": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.data\\Pizzaboxdata.csproj"
+              "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.data\\Pizzaboxdata.csproj": {
+                "projectPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.data\\Pizzaboxdata.csproj"
               },
-              "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\Pizzaboxdomain.csproj": {
-                "projectPath": "C:\\Revature\\Patel_Akash_Project0\\Pizzabox.domain\\Pizzaboxdomain.csproj"
+              "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\Pizzaboxdomain.csproj": {
+                "projectPath": "C:\\Users\\Akash\\Desktop\\Project1\\Patel_Akash_Project1\\Pizzabox.domain\\Pizzaboxdomain.csproj"
               }
             }
           }
