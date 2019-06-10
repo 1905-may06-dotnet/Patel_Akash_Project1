@@ -21,12 +21,12 @@ variables:
   buildConfiguration: 'Release'
   pathtosolution: 'Pizzabox.client/PizzaBoxSolution.sln'
   pathtoproject: 'PizzaWebsite'
- # pathtotest: 'Pizzabox.test'
+  pathtotest: 'Pizzabox.test'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-  workingDirectory: $(pathSolution)
+  workingDirectory: $(pathtoSolution)
 - script: dotnet test --configuration $(buildConfiguration) --no-build
   displayName: 'dotnet PizzaBoxTest'
 - task: DotNetCoreCLI@2
