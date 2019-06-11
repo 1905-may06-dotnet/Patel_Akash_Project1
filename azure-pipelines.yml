@@ -23,12 +23,26 @@ variables:
   pathtoproject: 'PizzaWebsite'
   pathtotest: 'Pizzabox.test'
 
+
 steps:
+  #sonarcloud
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'akashsky'
+    organization: 'akashmukeshpatel-github'
+    scannerMode: 'MSBuild'
+    projectKey: 'bbfb40d33a882916372463a8c6f3b04dedc34206'
+
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   workingDirectory: $(pathtosolution)
 - script: dotnet test --configuration $(buildConfiguration) --no-build
+
   displayName: 'dotnet PizzaBoxTest'
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
